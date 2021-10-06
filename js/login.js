@@ -1,6 +1,4 @@
-/*const signInForm = document.querySelector("#login-form");
-
-var form = document.getElementById("login-form");
+const signInForm = document.querySelector("#login-form");
 
 
 signInForm.addEventListener("submit", (e) => {
@@ -13,8 +11,26 @@ signInForm.addEventListener("submit", (e) => {
   .then((userCredential) => {
     // Signed in
     var user = userCredential.user;
-    window.location="Principal.html";
-    window.alert("Bienvenido");
+    firebase.firestore().collection("tipoUsuario").doc(email).get().then((doc)=> {
+          if (doc.data().tipo==0) {
+            window.location="principal.html";
+            window.alert("Bienvenido");
+          } else if (doc.data().tipo==1) {
+            window.location="principal1.html";
+            window.alert("Bienvenido");
+          }else if (doc.data().tipo==2) {
+            window.location="principal2.html";
+            window.alert("Bienvenido");
+          }else if (doc.data().tipo==3) {
+            window.location="principal3.html";
+            window.alert("Bienvenido");
+          }else if (doc.data().tipo==4) {
+            window.location="principal4.html";
+            window.alert("Bienvenido");
+          }
+    });
+
+    
     // ...
   })
   .catch((error) => {
@@ -43,10 +59,10 @@ $("#btn-reset").click(function(){
   }else{
     window.alert("Campo vacio. Ingresa tu correo");
   }
-}); */
+});
 
 
-var form = document.getElementById("login-form");
+/*var form = document.getElementById("login-form");
     const fireauth = firebase.auth();
 
 form.addEventListener("submit", login, false);
@@ -54,6 +70,7 @@ form.addEventListener("submit", login, false);
 function login () {
   var email = form["login-email"].value,
       pw = form["login-password"].value ;
+      window.alert(email+" "+pw);
 
   fireauth.signInWithEmailAndPassword(email, pw)
   .then((userCredential) => {
@@ -70,4 +87,4 @@ function login () {
     var errorMessage = error.message;
   });
   
-}
+} */
