@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio HICCO</title>
+
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+            
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        
+    <!-- Nuestro css-->
+    <link rel="stylesheet" type="text/css" href="css/index.css" th:href="@{/css/index.css}">
+    <link rel="stylesheet" href="css/sidebar.css">
+</head>
+<body>
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor"> <!--se pueden poner mas de una clase solo con un espacio-->
+                <img src="img/L2 sive.jpg"> 
+        </nav>
+    </div>
+    <div class="d-flex" id="wrapper">
+        <!-- Page Content-->
+        <div id="page-content-wrapper">
+            <div class="container p-4">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card">
+                      <div class="card-body">
+            
+                        <h1 class=" text-center">INGRESAR NOTA</h1>
+            
+                        <form id="task-form">
+                          <div class="form-group">
+                            <input type="text" id="task-title" class="form-control" class="Task Title" placeholder="Titulo de la nota"
+                              autofocus>
+                          </div>
+                          <div class="form-group">
+                            <textarea id="task-description" rows="3" class="form-control" placeholder="Descripcion de la nota"></textarea>
+                          </div>
+            
+                          <button class="btn btn-secondary" id="btn-task-form">
+                            Guardar
+                          </button>
+            
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Tasks List -->
+                  <div class="col-md-6" id="tasks-container"></div>
+                </div>
+              </div>
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+        
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+             <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
+        
+        <script>
+          // Your web app's Firebase configuration
+          var firebaseConfig = {
+                apiKey: "AIzaSyCU_JYup__8LBDY15ud7iWP3qhnpuLFaCo",
+            authDomain: "hicco-system.firebaseapp.com",
+            databaseURL: "https://hicco-system-default-rtdb.firebaseio.com/",
+            projectId: "hicco-system",
+            storageBucket: "hicco-system.appspot.com",
+            messagingSenderId: "700896552336",
+            appId: "1:700896552336:web:a5e0fef7a7b40a4a85bf15"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+        </script>
+        <script src="js/index.js"></script>
+        <style>
+            .card-body h1{
+    font-size: 30px;
+    font-weight: bold;
+    color: #314c5a;
+}
+        </style>
+        
+        </div>
+        <!-- Sidebar-->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+          <div class="list-group list-group-flush">
+            <a class="navbar-brand" href="#">MENÚ</a>
+                <a class="list-group-item list-group-item-action bg-light" href="principal.html">INICIO</a>
+                <a class="list-group-item list-group-item-action bg-light" href="Notas.html">NOTAS</a>
+                <a class="list-group-item list-group-item-action bg-light" href="Informes.html">INFORMES</a>
+                <a class="list-group-item list-group-item-action bg-light" href="Calendario.html">CALENDARIO</a>
+                <a class="list-group-item list-group-item-action bg-light" href="Contador.html">CONTADOR</a>
+                <a class="list-group-item list-group-item-action bg-light" href="Operador.html">OPERADOR DE BANCO</a>
+                <a class="list-group-item list-group-item-action bg-light" href="index.html">CERRAR SESIÓN</a>
+          </div>
+      </div>
+    </div>
+    <script src="js/scrips.js"></script>
+</body>
+</html>

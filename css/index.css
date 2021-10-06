@@ -1,0 +1,143 @@
+body {
+    background-size: cover;
+    font-size: 20px;/* Mejora la calidad*/
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, #426e86 0%, white 100%);
+}
+.navegacion-principal{
+    display: flex;/*activa flexbox*/
+    flex-direction:column;/*viene por default*/
+    /*align-items: center; //Como con justify solo se alinea horizontalmente con align lo anileamos vertialmente para los dispositivos moviles*/
+
+}
+.nav-bg{
+    background-color: #0d83d1;
+    box-shadow: 0px 0px 20px #426e86;
+    opacity: .7
+}
+.nav-bg img{
+    height: 135px;
+    width: 275px;
+    padding: .5rem;
+}
+.contenedor{
+    max-width: -05rem; /*width espacio entre elementos de la nav bar y max-width sirve para tomar como maximo esos rems*/
+    /*margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto; para centrar contenedor largo*/
+
+    /*margin: 0 auto 0 auto;/* para centrar contenedor corto*/
+
+    margin: 0 auto;/*y este todavia más corto solo si se repiten datos*/
+}
+.main-section{
+    margin: 0 auto;
+    margin-top: 25%;
+    padding: 0;
+}
+.modal-content{
+    background-color: #35654d;
+    opacity: .9;
+    padding: 0 20px;
+    box-shadow: 0px 0px 5px #0fb7d4; 
+    border-radius: 10.5%;
+}
+.texto-centro label{
+    text-align: left;
+    color: #D5D5D5;
+    font-size: 20px;
+    font-weight: bold;
+}
+/*Imagen*/
+.user-img{
+    margin-top: -50px;
+    margin-bottom: 35px;
+}
+.user-img img{
+   width: 150px;
+   height: 150px;
+}
+.form-group input{
+    height: 42px;
+    font-size: 18px;
+    border: 0;
+    padding-left: 54px;
+    border-radius: 5px;
+}
+.form-group label{
+    text-align: left;
+    color: #D5D5D5;
+    font-size: 20px;
+    font-weight: bold;
+}
+.form-group::before{
+    font-family: "Font Awesome\ 5 Free";
+    position: absolute;
+    left: 28px;
+    font-size: 22px;
+    padding: 4px;
+}
+.form-group#user-group::before{
+   content: "\f007"; 
+}
+.form-group#contraseña-group::before{
+    content: "\f084"; 
+ }
+ .button{
+     width: 60%;
+     margin: 5px 0 25px;
+ }
+ .forgot{
+     padding: 5px 0;
+ }
+ .forgot a{
+     color: antiquewhite;
+ }
+
+ .hero{
+    background-image: url(../img/carrusel1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+    position: relative;
+}
+.hero1{
+    background-image: url(../img/carrusel2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+    position: relative;
+}
+.hero2{
+    background-image: url(../img/carrusel3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+    position: relative;
+}
+.hero3{
+    background-image: url(../img/carrusel4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+    position: relative;
+}
+.contenido-hero{
+    position: absolute;
+    background-color: rgb(0 0 0 / 70%); 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+
+}
+.contenido-hero h2, .contenido-hero p{
+    color: white;
+}
+.contenido-hero .ubicacion{
+    display: flex;
+    align-items: flex-end;/*alinea hacia abajo*/
+}
