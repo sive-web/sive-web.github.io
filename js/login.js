@@ -52,7 +52,6 @@ var form = document.getElementById("login-form");
 form.addEventListener("submit", login, false);
 
 function login () {
-  window.alert("Hola");
   var email = form["login-email"].value,
       pw = form["login-password"].value ;
 
@@ -60,9 +59,11 @@ function login () {
   .then((userCredential) => {
     // Signed in
     var user = userCredential.user;
-    //window.location="Principal.html";
-    window.alert("Bienvenido");
+    window.alert(user);
+    //window.location.href="principal.html";
+    //window.alert("Bienvenido");
     // ...
+
   })
   .catch((error) => {
     var errorCode = error.code;
