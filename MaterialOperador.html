@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIVE</title>
 
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+    <script src="js/firebase.js"></script>
+
     <!--JQUERY-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -24,7 +30,7 @@
     <link href='lib/main.css' rel='stylesheet' />
     <script src='lib/main.js'></script>
     <script src='lib/locales-all.js'></script>
-
+    <script src="js/cal.js"></script>
 </head>
 <body>
     
@@ -37,21 +43,23 @@
     <div class="d-flex" id="wrapper">
         <!-- Page Content-->
         <div id="page-content-wrapper">
-            <iframe src="https://calendar.google.com/calendar/embed?height=1000&wkst=2&bgcolor=%238E24AA&ctz=America%2FMexico_City&showPrint=0&src=bmkxODdyY2RnYWJ0a3BvMTRsaTIyNW04cW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%239E69AF" style="border:solid 1px #777" width="1250" height="1000" frameborder="0" scrolling="no"></iframe>
+            
         </div>
         <!-- Sidebar-->
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="list-group list-group-flush">
                 <a class="navbar-brand" href="#">MENÚ</a>
-                <a class="list-group-item list-group-item-action bg-light" href="principal3.html">INICIO</a>
+                <a class="list-group-item list-group-item-action bg-light" href="principal1.html">INICIO</a>
                 <a class="list-group-item list-group-item-action bg-light" href="Notas.html">NOTAS</a>
-                <a class="list-group-item list-group-item-action bg-light" href="Material.html">MATERIAL DE APOYO</a>
-                <a class="list-group-item list-group-item-action bg-light" href="calendario3.html">CALENDARIO</a>
+                <a class="list-group-item list-group-item-action bg-light" href="Informes.html">INFORMES</a>
+                <a class="list-group-item list-group-item-action bg-light" href="calendario1.html">CALENDARIO</a>
+                <a class="list-group-item list-group-item-action bg-light" href="MaterialContador.html">CONTADOR MATERIAL DE APOYO</a>
                 <a class="list-group-item list-group-item-action bg-light" href="index.html">CERRAR SESIÓN</a>
             </div>
         </div>
     </div>
     <script src="js/scrips.js"></script>
+    <script src="js/fileshandle.js"></script>
     
 </body>
 </html>
