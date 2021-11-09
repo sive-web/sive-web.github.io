@@ -25,17 +25,16 @@
         
     <!-- Nuestro css-->
     
+    <link rel="stylesheet" type="text/css" href="css/index.css" th:href="@{/css/index.css}">
     <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="css/calendar.css">
     <link href='lib/main.css' rel='stylesheet' />
     <script src='lib/main.js'></script>
     <script src='lib/locales-all.js'></script>
-    <script src="js/cal.js"></script>
 </head>
 <body>
     
     <div class="nav-bg">
-        <nav class="navegacion-principal contenedor"> 
+        <nav class="navegacion-principal contenedor"> <!--se pueden poner mas de una clase solo con un espacio-->
                 <img src="img/L2 sive.jpg"> 
         </nav>
     </div>
@@ -43,7 +42,10 @@
     <div class="d-flex" id="wrapper">
         <!-- Page Content-->
         <div id="page-content-wrapper">
-            
+            <input type="file" id="file" name="file" accept=".pdf, .docx">
+            <button id="subir" name="subir">Subir Archivo</button>
+            <output id="output"></output>
+
         </div>
         <!-- Sidebar-->
         <div class="bg-light border-right" id="sidebar-wrapper">
@@ -51,15 +53,17 @@
                 <a class="navbar-brand" href="#">MENÚ</a>
                 <a class="list-group-item list-group-item-action bg-light" href="principal2.html">INICIO</a>
                 <a class="list-group-item list-group-item-action bg-light" href="notas2.html">NOTAS</a>
-                <a class="list-group-item list-group-item-action bg-light" href="Informes.html">INFORMES</a>
+                <a class="list-group-item list-group-item-action bg-light" href="Informes2.html">INFORMES</a>
                 <a class="list-group-item list-group-item-action bg-light" href="calendario2.html">CALENDARIO</a>
                 <a class="list-group-item list-group-item-action bg-light" href="MaterialOperador1.html">OPERADOR DE BANCO MATERIAL DE APOYO</a>
                 <a class="list-group-item list-group-item-action bg-light" href="index.html">CERRAR SESIÓN</a>
             </div>
         </div>
     </div>
+
     <script src="js/scrips.js"></script>
     <script src="js/fileshandle.js"></script>
+    <script>mostrarLista(); </script>
     
 </body>
 </html>
