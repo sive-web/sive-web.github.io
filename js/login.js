@@ -36,14 +36,14 @@ signInForm.addEventListener("submit", (e) => {
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
-    //window.alert("Correo o contraseña incorrectos, corrige información");//comentarios
-    window.alert("Mensaje : "+ errorMessage);
+    window.alert("Correo o contraseña incorrectos, corrige información");
+    console.log ("Mensaje : "+ errorMessage);
   });
 })
 
 
 
-$("#btn-reset").click(function(){
+/* $("#btn-reset").click(function(){
   
   var auth = firebase.auth();
   var email = $("#res-email").val();
@@ -59,7 +59,7 @@ $("#btn-reset").click(function(){
   }else{
     window.alert("Campo vacio. Ingresa tu correo");
   }
-});
+}); */
 
 
 /*var form = document.getElementById("login-form");

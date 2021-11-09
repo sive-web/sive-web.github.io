@@ -2,7 +2,7 @@ let storage = firebase.storage(),
     storageRef = firebase.storage().ref(),
     button = document.getElementById ("subir"), 
     file = document.getElementById ("file"),
-    maRef = storageRef.child("Material_Apoyo"),
+    maRef = storageRef.child("Informes"),
     output = document.getElementById ("output");
 
 
@@ -73,27 +73,3 @@ button.addEventListener("click", function (){
     function getFileName(file){
         return file.slice(12);
        }
-
-
-       async function mostrarLista1 () {
-        output.innerHTML = "";
-        maRef.listAll().then((res) => {
-            /*res.prefixes.forEach((folderRef) => {
-
-            }); */
-            res.items.forEach((itemRef) => {
-                    output.innerHTML += `<div id = "tasks-container" class = "col-md-6">
-                                            <div class=" card card-body mt-2 border-primary">
-                                            <p>
-                                                ${itemRef.name} 
-                                            </p>
-                                            <div>
-                                                <button class = "btn btn-primary btn-delete" data-refName = "${itemRef.name}" onclick = "javascript:bajarArchivo(this)">Descargar</button>
-                                            </div>
-                                            </div>
-                                        </div>`;
-            });
-        }).catch((error) => {
-            console.error(error);
-        });
-    }
