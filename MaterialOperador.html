@@ -25,11 +25,12 @@
         
     <!-- Nuestro css-->
     
-    <link rel="stylesheet" type="text/css" href="css/index.css" th:href="@{/css/index.css}">
     <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/calendar.css">
     <link href='lib/main.css' rel='stylesheet' />
     <script src='lib/main.js'></script>
     <script src='lib/locales-all.js'></script>
+    <script src="js/cal.js"></script>
 </head>
 <body>
     
@@ -42,29 +43,23 @@
     <div class="d-flex" id="wrapper">
         <!-- Page Content-->
         <div id="page-content-wrapper">
-            <input type="file" id="file" name="file" accept=".pdf, .docx">
-            <button id="subir" name="subir">Subir Archivo</button>
-            <output id="output"></output>
-
+            
         </div>
         <!-- Sidebar-->
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="list-group list-group-flush">
                 <a class="navbar-brand" href="#">MENÚ</a>
                 <a class="list-group-item list-group-item-action bg-light" href="principal.html">INICIO</a>
-                <a class="list-group-item list-group-item-action bg-light" href="notas.html">NOTAS</a>
+                <a class="list-group-item list-group-item-action bg-light" href="Notas.html">NOTAS</a>
                 <a class="list-group-item list-group-item-action bg-light" href="Informes.html">INFORMES</a>
                 <a class="list-group-item list-group-item-action bg-light" href="calendario.html">CALENDARIO</a>
-                <a class="list-group-item list-group-item-action bg-light" href="MaterialContador.html">CONTADOR</a>
-                <a class="list-group-item list-group-item-action bg-light" href="MaterialOperador.html">OPERADOR DE BANCO</a>
+                <a class="list-group-item list-group-item-action bg-light" href="MaterialContador.html">CONTADOR MATERIAL DE APOYO</a>
                 <a class="list-group-item list-group-item-action bg-light" href="index.html">CERRAR SESIÓN</a>
             </div>
         </div>
     </div>
-
     <script src="js/scrips.js"></script>
     <script src="js/fileshandle.js"></script>
-    <script>mostrarLista(); </script>
     
 </body>
 </html>
